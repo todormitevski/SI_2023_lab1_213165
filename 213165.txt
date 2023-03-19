@@ -1,0 +1,48 @@
+1,2,3... //
+4. git init - иницијализација на Git во директориумот
+5. git remote add origin https://github.com/todormitevski/SI_2023_lab1_213165.git - поврзување на локален со оддалечен репозиториум
+6. echo Todor, Mitevski, 213165> README.md
+   git add README.md
+   git commit -m "Initial commit"
+   Креирање на README.md со дадена содржина, додавање во staging area со команда git add и правиме snapshot од тој фајл со команда commit со порака "Initial commit"
+7. git add SILab1.java
+   git commit -m "Add java class"
+8. git push -u origin master - синхронизација на гранката master со оддалечениот репозиториум
+9. git branch bug1
+   git branch bug2
+   git branch bug3
+   Отварање три гранки
+10. git checkout bug1 - префрлање на гранка bug1
+11. git add SILab1.java
+    git commit -m "Fix wrong loop for reading"
+12. git checkout bug2
+13. git add SILab1.java
+    git commit -m "Fix wrong condition in filterOddNumbers"
+14. git checkout bug3
+15. git add SILab1.java
+    git commit -m "Fix method sumEvenNumbers"
+16. git checkout bug1
+    git push -u origin bug1
+    git checkout bug2
+    git push -u origin bug2
+    git checkout bug3
+    git push --force -u origin bug3
+    Синхронизирање на сите гранки со оддалечениот репозиториум
+17. git checkout master
+18. git merge bug1 - спојува гранка master со гранка bug1 со Fast-Forward стратегија
+    нема конфликти
+19. git push -u origin master
+20. git merge bug2 - спојува гранка master со гранка bug2 со рекурзивна стратегија
+    нема конфликти
+21. git push -u origin master
+22. git checkout bug3
+23. git rebase master - преместување на претходни комити во tmp каде прво претходните комити се извршуваат па после последните комити од bug3
+24. git checkout master
+25. git merge bug3 - спојува гранка master со гранка bug3 со Fast-Forward стратегија
+    нема конфликти
+26. git push -u origin master
+27. git log - прикажува логови
+    git add logs.txt
+    git add 213165.txt
+    git commit -m "Final commit"
+    git push
